@@ -29,7 +29,7 @@ var roleBuilder = {
     },
 
     spawn: function(spawner){
-        Game.spawns[spawner].spawnCreep([WORK,CARRY,CARRY,MOVE], "harvester" + Game.time.toString().slice(-4), {memory: {role:'builder', room:Game.spawns[spawner].room.name}});
+        Game.spawns[spawner].spawnCreep([WORK,CARRY,CARRY,MOVE], "builder" + Game.time.toString().slice(-4), {memory: {role:'builder', room:Game.spawns[spawner].room.name}});
     }
 };
 
