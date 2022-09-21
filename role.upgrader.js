@@ -26,7 +26,7 @@ var roleUpgrader = {
     },
     
     spawn: function(spawner){
-        spawner.spawnCreep([WORK,CARRY,CARRY,MOVE], "upgrader" + Game.time.toString().slice(-4), {memory: {role:'upgrader', room:spawner.room}});
+        Game.spawns[spawner].spawnCreep([WORK,CARRY,CARRY,MOVE], "upgrader" + Game.time.toString().slice(-4), {memory: {role:'upgrader', room:spawner.room}});
     }
 };
 
