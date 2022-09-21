@@ -26,7 +26,7 @@ var roleHarvester = {
     },
 
     spawn: function(spawner){
-        Game.spawns[spawner].spawnCreep([WORK,CARRY,CARRY,MOVE,MOVE], "harvester" + Game.time.toString().slice(-4), {memory: {role:'harvester', room:spawner.room}});
+        Game.spawns[spawner].spawnCreep([WORK,CARRY,CARRY,MOVE,MOVE], "harvester" + Game.time.toString().slice(-4), {memory: {role:'harvester', room:Game.spawns[spawner].room}});
     }
 };
 

@@ -15,7 +15,6 @@ var autospawner = {
         if(total_harvesters > current_harvesters){
             roleHarvester.spawn(spawner);
         } else if(total_upgraders > current_upgraders){
-            console.log('e');
             roleUpgrader.spawn(spawner);
         } else if(total_builders > current_builders){
             roleBuilder.spawn(spawner);
