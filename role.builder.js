@@ -26,6 +26,10 @@ var roleBuilder = {
                 creep.moveTo(sources[creep.room.memory.builder_source], {visualizePathStyle: {stroke: '#ffaa00'}});
             }
         }
+    },
+
+    spawn: function(spawner){
+        spawner.spawnCreep([WORK,CARRY,CARRY,MOVE], "harvester" + Game.time.toString().slice(-4), {memory: {role:'builder', room:spawner.room}});
     }
 };
 

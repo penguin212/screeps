@@ -23,6 +23,10 @@ var roleUpgrader = {
                 creep.moveTo(sources[creep.room.memory.upgrader_source], {visualizePathStyle: {stroke: '#ffaa00'}});
             }
         }
+    },
+    
+    spawn: function(spawner){
+        spawner.spawnCreep([WORK,CARRY,CARRY,MOVE], "upgrader" + Game.time.toString().slice(-4), {memory: {role:'upgrader', room:spawner.room}});
     }
 };
 
