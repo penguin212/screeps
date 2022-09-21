@@ -35,7 +35,7 @@ module.exports.loop = function () {
     }
     for(var creep in Memory.creeps){
         if(!Game.creeps[creep]) {
-            delete Memory.creeps[i];
+            delete Memory.creeps[creep];
         }
     }
 
