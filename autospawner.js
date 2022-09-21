@@ -12,11 +12,11 @@ var autospawner = {
         var current_upgraders = _.sum(Game.creeps, (c) => c.memory.role == 'builder' && c.memory.room == Game.spawns[spawner].room);
         var current_builders = _.sum(Game.creeps, (c) => c.memory.role == 'builder' && c.memory.room == Game.spawns[spawner].room);
         
-        if(total_harvesters < current_harvesters){
+        if(total_harvesters > current_harvesters){
             roleHarvester.spawn(Game.spawns[spawner]);
-        } else if(total_upgraders < current_upgraders){
+        } else if(total_upgraders > current_upgraders){
             roleUpgrader.spawn(Game.spawns[spawner]);
-        } else if(total_builders < current_builders){
+        } else if(total_builders > current_builders){
             roleBuilder.spawn(Game.spawns[spawner]);
         }
     }
