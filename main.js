@@ -34,7 +34,7 @@ module.exports.loop = function () {
     }
 
     for(var spawner in Game.spawns) {
-        autospawner.autospawner(spawner);
+        autospawner.run(spawner);
     }
 
 }
