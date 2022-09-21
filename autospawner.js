@@ -13,6 +13,7 @@ var autospawner = {
         var current_builders = _.sum(Game.creeps, (c) => c.memory.role == 'builder' && c.memory.room.name == Game.spawns[spawner].room);
         
         if(total_harvesters > current_harvesters){
+            console.log(current_harvesters);
             roleHarvester.spawn(spawner);
         } else if(total_upgraders > current_upgraders){
             roleUpgrader.spawn(spawner);
