@@ -4,9 +4,10 @@ var roleBuilder = require('role.builder');
 
 var autospawner = {
     run: function(spawner){
-        var total_harvesters = Game.getObjectById(spawner).memory.num_harvesters
-        var total_upgraders = Game.getObjectById(spawner).memory.num_upgraders
-        var total_builders = Game.getObjectById(spawner).memory.num_builders
+        console.log(spawner);
+        var total_harvesters = Game.getObjectById(spawner).memory.num_harvesters;
+        var total_upgraders = Game.getObjectById(spawner).memory.num_upgraders;
+        var total_builders = Game.getObjectById(spawner).memory.num_builders;
 
         var current_harvesters = _.sum(Game.creeps, (c) => c.memory.role == 'builder' && c.memory.room == Game.getObjectById(spawner).room);
         var current_upgraders = _.sum(Game.creeps, (c) => c.memory.role == 'builder' && c.memory.room == Game.getObjectById(spawner).room);
