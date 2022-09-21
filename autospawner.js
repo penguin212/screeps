@@ -4,7 +4,6 @@ var roleBuilder = require('role.builder');
 
 var autospawner = {
     run: function(spawner){
-        console.log(spawner);
         var total_harvesters = Game.spawns[spawner].memory.num_harvesters;
         var total_upgraders = Game.spawns[spawner].memory.num_upgraders;
         var total_builders = Game.spawns[spawner].memory.num_builders;
